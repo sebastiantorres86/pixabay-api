@@ -13,7 +13,7 @@ function App() {
     const consultAPI = async () => {
       if (search === "") return;
 
-      const imagesPerPage = 30;
+      const imagesPerPage = 10;
       const key = "18095190-f940ec0cf0fd95da16bce0743";
       const url = `https://pixabay.com/api/?key=${key}&q=${search}&per_page=${imagesPerPage}&page=${actualPage}`;
 
@@ -55,7 +55,9 @@ function App() {
   return (
     <div className="container">
       <div className="jumbotron">
-        <h1 className="text-center mb-5">Incredible free images to download</h1>
+        <h1 className="text-center mb-5">
+          Incredible free images to download
+        </h1>
 
         <Form saveSearch={saveSearch} />
       </div>
@@ -66,7 +68,7 @@ function App() {
         {actualPage === 1 ? null : (
           <button
             type="button"
-            className="btn btn-info mr-1"
+            className="btn mr-1 btn-success mb-5"
             onClick={previousPage}
           >
             &laquo; Prev
@@ -74,7 +76,11 @@ function App() {
         )}
 
         {actualPage === totalPages ? null : (
-          <button type="button" className="btn btn-info" onClick={nextPage}>
+          <button
+            type="button"
+            className="btn btn-success mb-5"
+            onClick={nextPage}
+          >
             Next &raquo;
           </button>
         )}

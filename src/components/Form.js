@@ -34,7 +34,7 @@ const Form = ({ saveSearch }) => {
         <div className="form-group col-md-4">
           <input
             type="submit"
-            className="btn btn-lg btn-danger btn-block"
+            className="btn btn-lg btn-success btn-block"
             value="Search"
           />
         </div>
